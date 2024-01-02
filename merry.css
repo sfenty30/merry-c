@@ -1,0 +1,49 @@
+body {
+    background-color: #0e1621;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.snowflakes {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.snowflake {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: snowfall 2s infinite linear;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, 100vh) rotate(360deg) scale(0.2);
+        opacity: 0;
+    }
+}
